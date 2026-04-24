@@ -2,6 +2,10 @@
     function load_css(){
         wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), false, 'all');
         wp_enqueue_style('bootstrap');
+
+        /* Put this after bootstrap so main css is primary instead of bootstrap */
+        wp_register_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), false, 'all');
+        wp_enqueue_style('main');
     }
     add_action('wp_enqueue_scripts', 'load_css');
 
