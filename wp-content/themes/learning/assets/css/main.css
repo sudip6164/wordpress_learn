@@ -4,6 +4,27 @@ header {
   height: 100px;
 }
 
-.page-wrap{
-    padding: 2rem 0;
+.page-wrap {
+  padding: 2rem 0;
+}
+
+header .top-bar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header .top-bar li a {
+  padding: 0.25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+
+header .top-bar li:last-child a {
+  padding-right: 0;
 }
