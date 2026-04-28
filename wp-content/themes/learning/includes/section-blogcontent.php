@@ -4,7 +4,7 @@
         <?php echo get_the_date('Y-m-d'); ?>
         <?php the_content(); ?>
         <?php if (has_post_thumbnail()): ?>
-            <img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="img-fluid">
+            <img src="<?php the_post_thumbnail_url('blog-small') ?>" alt="<?php the_title(); ?>" class="img-fluid">
         <?php endif; ?>
         <?php // the_author(); ?>
         <?php $fname = get_the_author_meta('first_name'); ?>
