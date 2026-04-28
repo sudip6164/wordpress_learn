@@ -3,6 +3,9 @@
         the_post(); ?>
         <?php echo get_the_date('Y-m-d'); ?>
         <?php the_content(); ?>
+        <?php if (has_post_thumbnail()): ?>
+            <img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="img-fluid">
+        <?php endif; ?>
         <?php // the_author(); ?>
         <?php $fname = get_the_author_meta('first_name'); ?>
         <?php $lname = get_the_author_meta('last_name'); ?>
@@ -18,7 +21,7 @@
 
         <?php $categories = get_the_category();
         if ($categories):
-            echo("Category: ");
+            echo ("Category: ");
             foreach ($categories as $cat): ?>
                 <a href="<?php echo get_category_link($cat->term_id); ?>">
                     <?php echo $cat->name ?>
