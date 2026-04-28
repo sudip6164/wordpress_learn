@@ -25,4 +25,6 @@
                 </a>
             <?php endforeach; endif; ?>
 
+
+        <?php comments_template(); ?>
     <?php endwhile; else: endif; ?>
