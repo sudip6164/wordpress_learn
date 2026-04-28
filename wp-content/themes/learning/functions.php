@@ -2,6 +2,7 @@
 
     add_theme_support('menus');
     add_theme_support('post-thumbnails');
+    add_theme_support('widgets');
 
     function load_css(){
         wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), false, 'all');
